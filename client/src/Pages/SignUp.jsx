@@ -45,11 +45,11 @@ const SignUp = () => {
     event.preventDefault();
     const { email, avatar, password, fullName } = signupData;
     // checking the empty fields
-    if (!avatar || !email || !fullName || !password) {
+    if ( !email || !fullName || !password) {
       toast.error("Please fill all the fields");
       return;
     }
-
+   
     // checking the name field length
     if (fullName.length < 5) {
       toast.error("Name should be atleast of 5 characters");
